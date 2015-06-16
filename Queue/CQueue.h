@@ -1,7 +1,7 @@
 #ifndef CQueue_h_
 #define CQueue_h_
 
-#define QSize 100
+#define QSIZE 100
 
 class CQueue{
   public:
@@ -13,8 +13,10 @@ class CQueue{
     void showQ();
   
   private:
-    CMessage mQueue[QSize];
+    CMessage mQueue[QSIZE];
     int mTailIndex;
     int mHeadIndex;
     int mSize;
 };
+
+#endif
