@@ -3,7 +3,7 @@
 CQueue::CQueue():mTailIndex(0), mHeadIndex(0), mSize(0) {}
 CQueue::~CQueue() {}
 
-CQueue::add(const CMessage &msg) {
+bool CQueue::add(const CMessage &msg) {
   mQueue[mTailIndex] = msg;
   mTailIndex--;
   if(mTailIndex < 0) {
@@ -13,7 +13,7 @@ CQueue::add(const CMessage &msg) {
   return true;
 }
 
-CQueue::get(CMessage &msg) {
+bool CQueue::get(CMessage &msg) {
   msg = mQueue[mHeadIndex];
   mHeadIndex--;
   if(mHeadIndex < 0) {
@@ -21,4 +21,8 @@ CQueue::get(CMessage &msg) {
   }
   mSize--;
   return true;
+}
+
+void CQueue::showQ() {
+    
 }
