@@ -1,4 +1,5 @@
 #include "CQueue.h"
+#include "CMessage.h"
 
 CQueue::CQueue():mTailIndex(0), mHeadIndex(0), mSize(0) {}
 CQueue::~CQueue() {}
