@@ -1,3 +1,5 @@
+#include "CMessage.h"
+
 #ifndef CQueue_h_
 #define CQueue_h_
 
