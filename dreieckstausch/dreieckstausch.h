@@ -1,5 +1,5 @@
-#ifndef _dreieckstausch_h_
-#define _dreieckstausch_h_
+#ifndef _DREIECKSTAUSCH_H_
+#define _DREIECKSTAUSCH_H_
 
 class dreieckstausch {
 public:
@@ -10,7 +10,7 @@ public:
 	void tausch(double &a, double &b);
 	
 private:
-	int Counter;
+	int Counter; // oder static 
 };
 
 #endif
