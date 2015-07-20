@@ -23,7 +23,7 @@ class myClass {
     const int x;
 }
 
-myClass::myClass():x(5) { // Listeninitialisierung -> const Wert zuweise
+myClass::myClass():x(5) { // Listeninitialisierung -> const Wert zuweisen
   x =5 // nicht möglich da const
 }
 _________________________________________________________________________
@@ -31,9 +31,10 @@ const int * Ptr; // Pointer auf konstantes Objekt -> *Ptr=0; -> Fehler
 int * const xPtr; // konstanter Pointer auf Objekt -> xPtr=0xAdr. -> Fehler
 const int * const Ptr; // konstanter Pointer auf konstantes Objekt
 
-const int *& z=Ptr; // Referenz Pointer auf konstantes Objekt;
-    -> z=0xAdr // -> geht
-    -> *z=0 // -> Fehler, Read-Only
+const int *& z=Ptr; /* Referenz Pointer auf konstantes Objekt;
+                    -> z=0xAdr -> geht
+                    -> *z=0 -> Fehler, Read-Only
+                    */
     
 int *& u = xPtr; // Fehler, xPtr konstanter Pointer
 const int *& v = xPtr; // Fehler, const falsch
