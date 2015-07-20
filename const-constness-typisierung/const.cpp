@@ -1,17 +1,18 @@
 int a;  // Typisierung: Speichergröße, Robustheit (Sicherheit, Fehler früh erkennen)
 
-int fkt(int x)  //  Call-By-Value, -> Kopie, Sicher
+int fkt(int x)  /*  Call-By-Value, -> Kopie, Sicher
                     - nur ein Rückgabewert
                     - Speicherverbrauch, Performance
-                    
-int *fkt(int *x) // + Call-By-Reference, Pointer
+                */    
+int *fkt(int *x) /* + Call-By-Reference, Pointer
                     + keine Kopie -> wenig Speicherverbrauch
                     + mehrere Rückgaben möglich
                     - nicht robust gegen Pointerfehler
-                    
-int fkt(int &x) //  Referenz Parameter, Alias
+                */    
+int fkt(int &x) /*  Referenz Parameter, Alias
                     + kein zusätzlicher Speicher notwendig
                     + mehrere Rückgaben möglich
+                */
 _________________________________________________________________________
 
 const int a;  // konstantes Objekt a, Read-Only
@@ -31,8 +32,8 @@ int * const xPtr; // konstanter Pointer auf Objekt -> xPtr=0xAdr. -> Fehler
 const int * const Ptr; // konstanter Pointer auf konstantes Objekt
 
 const int *& z=Ptr; // Referenz Pointer auf konstantes Objekt;
-    -> z=0xAdr -> geht
-    -> *z=0 -> Fehler, Read-Only
+    -> z=0xAdr // -> geht
+    -> *z=0 // -> Fehler, Read-Only
     
 int *& u = xPtr; // Fehler, xPtr konstanter Pointer
 const int *& v = xPtr; // Fehler, const falsch
